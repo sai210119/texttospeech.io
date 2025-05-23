@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #010758, #490d61);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #ff2963;
+}
+
+textarea {
+    width: 90%;
+    max-width: 600px;
+    height: 200px;
+    background: #403d84;
+    color: #fff;
+    font-size: 16px;
+    border: 0;
+    outline: 0;
+    padding: 15px;
+    border-radius: 10px;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+textarea::placeholder {
+    font-size: 14px;
+    color: rgb(220, 220, 220);
+}
+
+.row {
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+button {
+    background: #ff2963;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+button img {
+    width: 14px;
+    margin-right: 8px;
+}
+
+select {
+    flex: 1;
+    color: #fff;
+    background: #403d84;
+    height: 45px;
+    padding: 0 15px;
+    outline: 0;
+    border: 0;
+    border-radius: 30px;
+    background-image: url(dropdown.png);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position-x: calc(100% - 15px);
+    background-position-y: 50%;
+    cursor: pointer;
+}
+
+/* Mobile Fix for Dropdown */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+    textarea {
+        height: 180px;
+    }
+    .row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    button {
+        width: 100%;
+        justify-content: center;
+    }
+    select {
+        background-image: none; /* Remove custom dropdown arrow */
+        appearance: auto; /* Restore default dropdown */
+        font-size: 16px; /* Increase font size for better touch */
+        height: 50px; /* Increase height for better touch */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 26px;
+    }
+    textarea {
+        height: 150px;
+    }
+    button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+    button img {
+        width: 12px;
+    }
+}
